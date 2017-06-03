@@ -1,6 +1,8 @@
 {erl_opts, [debug_info, {parse_transform, lager_transform}]}.
 
 {deps, [
+    {lager, {git, "https://github.com/basho/lager.git", {tag, "3.2.4"}}},
+    {setup, {git, "git://github.com/basho/setup.git", {branch, "master"}}},
     {pbkdf2, {git, "git://github.com/marianoguerra/erlang-pbkdf2-no-history", {branch, "master"}}},
     {exometer_core, {git, "git://github.com/basho/exometer_core.git", {branch, "th/correct-dependencies"}}},
     {riak_core, {git, "git://github.com/basho/riak_core", {branch, "develop"}}}
@@ -26,7 +28,7 @@
 ]}.
 
 {plugins, [
-    {rebar3_run, {git, "git://github.com/tsloughter/rebar3_run.git", {branch, "master"}}}
+    %{rebar3_run, {git, "git://github.com/tsloughter/rebar3_run.git", {branch, "master"}}}
 ]}.
 
 {project_plugins, [{rebar3_cuttlefish, {git, "git://github.com/tsloughter/rebar3_cuttlefish.git", {branch, "master"}}}]}.
